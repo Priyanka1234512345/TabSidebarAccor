@@ -1,0 +1,109 @@
+/* sidebar Task */
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.sidebar{
+width: 300px;
+height:100vh;
+background-color: purple;
+ position: fixed;
+ top:0;
+ /* left: -450px;; */
+transition: all .4s ease-in-out;
+z-index: 1; 
+}
+/* position: fixed;
+top:0;
+left:0;
+left:-450px;
+transition: all .4s ease-in-out;
+z-index: 1; */
+
+.section{
+    height: 90vh;
+    border:10px solid #ededed;
+    padding: 25px;
+    font-size: 38px;
+}
+.sidebarToggle{
+    position: fixed;
+    top: 25px;
+    left: 25px;
+    font-size: 40px;
+    cursor: pointer;
+}
+.sidebar .show{
+left:0;
+}
+.sidebarClose{
+    position: absolute;
+    color: floralwhite;
+    cursor: pointer;
+    top: 25px;
+    left:25px;
+}
+.backDrop{
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(9, 43, 83, 0);
+}
+.d-none{
+    display: none;
+}
+/* Tab Css */
+body{
+    background-color: #ededed;
+}
+.tabHeading{
+    list-style: none;
+    display: flex;
+    background-color: black;
+    color: white;
+    padding: 0;
+    margin: 0;
+}
+.tabHeading li{
+    width: 25%;
+    padding: 10px;
+    cursor: pointer;
+    transition: all .4s ease-in-out;
+}
+.tabHeading li:is(:hover, :focus, :active), .tabHeading li.active{
+    background-color: brown;
+}
+.tabPanel{
+    display: none;
+}
+.tabPanel.active{
+ display: block;
+}
+/* accor css */
+.acc-content{
+    padding: 10px;
+    border: 1px solid #000;
+    margin: 0;
+    display: none;
+}
+
+.acco-heading{
+    background-color: #000;
+    color: #ededed;
+    padding: 10px;
+    margin: 0;
+    cursor: pointer;
+}
+.acco-heading:hover,
+.acco-heading.focus,
+.acco-heading.active,
+.acco-heading.active{
+    background-color: orange;
+}
+
+.acco-heading.active + .acc-content{
+    display: block;
+}
